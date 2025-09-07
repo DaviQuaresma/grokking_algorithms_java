@@ -1,16 +1,23 @@
 package org.example;
 
 import org.example.chapterOne.BinarySearch;
+import org.example.chapterTwo.OrdenationBySelection;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
 
-    BinarySearch bs = new BinarySearch();
+        OrdenationBySelection ob = new OrdenationBySelection();
 
-    Integer[] lista_ordenada = {1, 3, 5, 7, 9};
+        List<Integer> arr = new ArrayList<>(Arrays.asList(42, 7, 89, 15, 63, 28, 94, 3, 56, 71));
 
-    Integer result = bs.pesquisa_binaria(lista_ordenada, 9);
+        List<Integer> resultado = ob.ordenacaoPorSelecao(arr);
 
-    System.out.println("Resultado da operação: " + result);
+        System.out.println("result: " + resultado);
+
     }
 }
